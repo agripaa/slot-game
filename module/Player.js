@@ -23,6 +23,9 @@ class Player {
     sessionStorage.setItem('token', this.generateToken())
     registerForm.style.display = "none"
     logoutForm.style.display = "block"
+    content.style.display = "block"
+    slider.style.display = "block"
+    location.reload()
     setTimeout(function () {
       location.href = "#start"
     }, 500)
