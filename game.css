@@ -137,3 +137,18 @@ section {
   background-color: wheat;
   border-radius: 15px;
 }
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 75px;
+  height: 75px;
+  background-color: wheat;
+  border-radius: 15px;
+}

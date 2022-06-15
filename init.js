@@ -8,6 +8,7 @@ const box2 = document.getElementById("box2")
 const box3 = document.getElementById("box3")
 const rewardImage = document.getElementById("imgReward")
 const content = document.getElementById("content")
+const slider = document.getElementById("top")
 
 const player = new Player()
 
@@ -103,10 +104,12 @@ onload = function () {
     registerForm.style.display = "none"
     logoutForm.style.display = "block"
     content.style.display = "block"
+    slider.style.display = "block"
   } else {
     registerForm.style.display = "block"
     logoutForm.style.display = "none"
     content.style.display = "none"
+    slider.style.display = "none"
   }
 }
 
