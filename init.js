@@ -7,8 +7,13 @@ const box1 = document.getElementById("box1")
 const box2 = document.getElementById("box2")
 const box3 = document.getElementById("box3")
 const rewardImage = document.getElementById("imgReward")
+const marquee = document.getElementById("marquee")
+let restart = document.getElementById("restart")
 
 const player = new Player()
+var marqueeText = document.createTextNode("Selamat Anda Telah Memenangkannya!")
+var restartText = document.createTextNode("Restart")
+restart.style.visibility = "hidden"
 
 let default_option = ['😍', '🤣', '😱']
 box1.textContent = default_option[0]
@@ -47,6 +52,9 @@ function winner() {
     console.log('win')
     reward()
     location.href = "#reward"
+    marquee.appendChild(marqueeText)
+    restart.appendChild(restartText)
+    restart.style.visibility = "visible"
   } else {
     console.log('lose')
     const swalWithBootstrapButtons = Swal.mixin({
@@ -78,7 +86,22 @@ function winner() {
     })
   }
 }
+function restartButton() {
+  location.href = "#start"
 
+  const rolling = setInterval( function () {
+    const result = dice()
+    box1.textContent = result[0]
+    box2.textContent = result[1]
+    box3.textContent = result[2]
+}, 100)
+
+//  Ketika
+setTimeout(function() {
+    clearInterval(rolling)
+    winner()
+}, 3000)
+}
 function start() {
   //selama
   const rolling = setInterval(function () {
