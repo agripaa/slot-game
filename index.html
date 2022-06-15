@@ -1,67 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no" />
+    <!-- TITLE -->
+    <title>GROUPFIVE88</title>
+    <!-- CSS STYLE -->
     <link rel="stylesheet" href="style.css" />
-    <title>Deacode - Template HTML Basic</title>
   </head>
   <body>
-    <section id="home">
+    <!-- NAVIGASI -->
+    <nav>
       <div class="container">
-        <!-- navigation bar start -->
-        <div class="navwrapper">
-          <ul class="navigation">
-            <li class="nav">
-              <a href="#home" class="navlink">HOME</a>
-            </li>
-            <li class="nav">
-              <a href="#start" class="navlink">START</a>
-            </li>
-            <li class="nav">
-              <a href="#reward" class="navlink">REWARD</a>
-            </li>
+        <div class="logo" id="home">
+          <h1>GroupFive88</h1>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#about">GAME</a></li>
           </ul>
         </div>
-        <div class="contentwrapper">
-          <div class="title" id="title">Register Here</div>
-          <div id="registerForm">
-            <input type="text" placeholder="username" id="username"/>
-            <button onclick="register()">Register</button>
+      </div>
+      <div class="toggleButton">
+        <input type="checkbox" name="" id="">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header>
+      <div id="slides">
+        <ul>
+      <li><img src="img/img1.png" alt="" class="slide showing" /></li>
+     <li><img src="img/img2.png" alt="" class="slide" /></li> 
+      <li><img src="img/img3.png" alt="" class="slide" /></li>
+    </ul>
+    </div>
+      <div class="scroll">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <!-- main -->
+    <img src="img/bg_body_top.png" alt="" class="top" />
+    <main>
+      <div class="about" id="about">
+        <div class="about1">
+          <div class="textAbout">
+            <h1>ABOUT GROUPFIVE88</h1>
           </div>
-          <button onclick="logout()" id="logoutForm">Logout</button>
+          <div class="text1">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint
+              fugit, rerum eaque quos quia temporibus perferendis odit ipsa ut
+              voluptate, tempora deserunt! Laudantium velit quos minus
+              accusantium debitis iste! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Cumque dolores autem quos dignissimos vitae, qui
+              atque, commodi ducimus suscipit quaerat dolor esse hic deserunt
+              saepe tempore quis minima excepturi sed?
+            </p>
+          </div>
+          <div class="text2">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+              quaerat veniam id consequatur doloribus exercitationem asperiores
+              vero quibusdam voluptatem quidem unde nulla ab accusamus dicta,
+              ullam quia distinctio sunt nostrum? Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Exercitationem maxime mollitia
+              voluptas quasi nihil numquam praesentium. Porro, vitae alias. Rem
+              quasi tenetur earum cumque doloribus debitis fuga doloremque quia
+              reiciendis?
+            </p>
+            <a href="#">READ MORE ></a>
+          </div>
+          <img src="img/sep_big.png" alt="" class="garisBawah" />
         </div>
-      </div>
-    </section>
-    <section id="start">
-      <div class="container red">
-        <div class="gamewrapper">
-          <div class="box" id="box1"></div>
-          <div class="box" id="box2"></div>
-          <div class="box" id="box3"></div>
-        </div>
-        <div class="buttonwrapper">
-          <button class="startButton" onclick="start()">START</button>
-        </div>
-      </div>
-    </section>
-    <section id="reward">
-      <div class="container blue">
-        <div class="contentwrapper" id="imgReward"> 
-          <h1>✌️REWARD BUAT ANDA🤞</h1>
-        </div>
-      </div>
-    </section>
-    <div class="top" id="top" onclick="directing()">☝</div>
-    <script>
-      function directing(){
-        location.href = "#home"
-      }
-    </script>
-    <script src="module/Player.js"></script>
-    <script src="init.js"></script>
-    <script src="../dist/sweetalert2.all.min.js"></script>
 
+        <div class="about2">
+          <h1 class="head">featured games</h1>
+          <div class="image1">
+            <img src="img/img1.png" alt="" />
+            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro a
+              distinctio ducimus quae dolorum quia, tempora,
+            </p>
+          </div>
+          <div class="image2">
+            <img src="img/img2.png" alt="" />
+            <h1>Lorem ipsum dolor sit amet,</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              error voluptatum eos qui harum quo voluptatibus quod Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Iusto sint asperiores
+              illo repudiandae sed adipisci quaerat tempore optio doloribus
+              iure, eveniet ad sapiente quam illum rerum, hic, itaque deleniti
+              officia!,
+            </p>
+          </div>
+        </div>
+        <div class="about3">
+          <div class="kotak1">
+            <h1 class="waktu">WAKTU GACORRR !!!</h1>
+            <hr />
+            <table>
+              <tr>
+                <td><h1>11.00pm</h1></td>
+                <td class="keterangan">
+                  <h2>waktu gacor paling ampuhh</h2>
+                  <p>kalo ga percaya coba aja</p>
+                </td>
+              </tr>
+              <tr>
+                <td><h1>21.00am</h1></td>
+                <td class="keterangan">
+                  <h2>waktu gacor paling ampuhh</h2>
+                  <p>kalo ga percaya coba aja</p>
+                </td>
+              </tr>
+              <tr>
+                <td><h1>12.00pm</h1></td>
+                <td class="keterangan">
+                  <h2>waktu gacor paling ampuhh</h2>
+                  <p>kalo ga percaya coba aja</p>
+                </td>
+              </tr>
+              <tr>
+                <td><h1>14.00pm</h1></td>
+                <td class="keterangan">
+                  <h2>waktu gacor paling ampuhh</h2>
+                  <p>kalo ga percaya coba aja</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2>Ingin Mencoba keasikan dalam bermai slot? Klik button dibawah ini</h2>
+          <button>COBA</button>
+          <img src="/img/daftar.gif" class="daftar-slot">
+        </div>
+      </div>
+  </main>
+
+    <footer>
+      <div class="containerFooter">
+      <div class="footer">
+        <div class="logo">
+         <a href="#home" style="text-decoration:none ;"><h1>GroupFive88</h1></a> 
+        </div>
+        <div class="menuFooter">
+          <ul class="pilihFooter">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#">GAME</a></li>
+            <li><a href="#">LOGIN</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sosmed">
+      <div class="pilihanSosmed">
+        <ul>
+          <li>
+            <a href=""><img src="img/fb.png" alt="" /></a>
+          </li>
+          <li><a href=""><img src="img/icon_twitter.png " alt="" /></li></a>
+          <li>
+            <a href=""><img src="img/ig.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>copyright Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+      </div>
+        
+      </div>
+    </div>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="style.js"></script>
   </body>
 </html>

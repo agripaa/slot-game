@@ -7,6 +7,7 @@ const box1 = document.getElementById("box1")
 const box2 = document.getElementById("box2")
 const box3 = document.getElementById("box3")
 const rewardImage = document.getElementById("imgReward")
+const content = document.getElementById("content")
 
 const player = new Player()
 
@@ -69,11 +70,9 @@ function winner() {
       if (result.isConfirmed) {
         true
       } else if (
-        /* Read more about handling dismissals below */
         result.dismiss === Swal.DismissReason.cancel
       ) {
-        player.logout,
-        window.location.href="http://www.google.com"
+        player.logout
       }
     })
   }
@@ -103,9 +102,11 @@ onload = function () {
   if (token && token != null) {
     registerForm.style.display = "none"
     logoutForm.style.display = "block"
+    content.style.display = "block"
   } else {
     registerForm.style.display = "block"
     logoutForm.style.display = "none"
+    content.style.display = "none"
   }
 }
 

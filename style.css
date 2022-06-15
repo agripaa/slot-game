@@ -1,23 +1,35 @@
-@import url('https://fonts.googleapis.com/css2/family=Patrick+Hand&display=swap');
-
-*,
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 body {
-  font-family: 'Patrick Hand', cursive;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
+/* NAVIGASI */
+nav {
+  z-index: 22;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 30px;
+  background-image: url(img/bg_menu.png);
+  align-items: center;
+  display: flex;
 
-section {
-  height: 100vh;
+  position: absolute;
 }
-
 .container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.games  {
   width: 100%;
   height: 100%;
   background-color: #222;
@@ -31,21 +43,394 @@ section {
   background-color: slateblue;
 }
 
-.title {
+h2{
+  margin-top: 10px;
+  color: yellowgreen;
+}
+
+button{
+  border: 1px solid yellowgreen;
+  background: yellowgreen;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+button:hover{
+  color: yellowgreen;
+  background: transparent;
+  cursor: pointer;
+}
+
+.daftar-slot{
+  margin-top: 50px;
+  width: 350px;
+}
+
+/* FONT LOGO */
+.logo h1 {
+  font-size: 50px;
+  filter: drop-shadow(4px 8px black);
+  font-family: "font_logo";
+  background: linear-gradient(to right, red, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+@font-face {
+  font-family: "font_logo";
+  src: url("/font/nightfate.ttf") format("truetype");
+}
+/* sampe sini */
+/* CSS MENU */
+.menu {
+  width: 350px;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+.menu ul li a {
+  display: block;
+  width: 80px;
+  font-size: 30px;
+  color: white;
+  margin-right: 40px;
+  text-decoration: none;
+  font-family: "font_logo";
+  background: linear-gradient(to right, red, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+li a:hover {
+  filter: drop-shadow(4px 8px black);
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+  filter: drop-shadow();
+}
+/* Toogle */
+.toggleButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  position: relative;
+}
+.toggleButton span {
+  display: block;
+  background-color: wheat;
+  width: 27px;
+  height: 5px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.toggleButton input {
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  cursor: pointer;
+}
+.toggleButton span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.toggleButton span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.toggleButton input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(3px, -1px);
+}
+.toggleButton input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(5px, 0);
+}
+.toggleButton input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+.menu.active ul {
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+/* SAMPE SINI */
+/* NAVIGASI */
+
+/* HEADER */
+header {
+  height: 95vh;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+/* atur IMAGE */
+header img {
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
+  position: absolute;
+  box-sizing: border-box;
+}
+.showing {
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.5 ease;
+}
+/* ATUR SCROLL */
+.scroll {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 22;
+}
+.scroll span {
+  background-color: black;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+.scroll span:hover {
+  opacity: 0.5;
+}
+
+/* SAMPE SINI */
+/* HEADER */
+
+/* ABOUT */
+main {
+  width: 100%;
+  padding-bottom: 5%;
+  background-image: url(img/bg_body.png);
+  background-repeat: repeat;
+}
+.top {
+  margin-bottom: -10px;
+  width: 100%;
+}
+/* POSISI ABOUT */
+.about {
+  display: grid;
+  grid-template-rows: 0fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "head head head head"
+    "about1 about1 about2 about2"
+    "about1 about1 about2 about2"
+    "about1 about1 about2 about2";
+  width: 70%;
+  gap: 10px;
+  height: 100%;
+  margin: 0px auto;
+}
+/* ABOUT 1 */
+.about .about1 {
+  display: grid;
+  grid-area: head;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 0.7fr 0;
+  gap: 10px;
+  grid-column: 1/6;
+  grid-row: 1/2;
+  position: relative;
+  box-sizing: border-box;
+}
+.textAbout {
+  grid-column: 1/4;
+  color: greenyellow;
+  text-shadow: 1px 2px black;
+  font-family: "Luckiest Guy", cursive;
+}
+.about1 p {
+  font-size: 17px;
+  color: white;
+}
+.text2 a {
+  display: block;
+  text-decoration: none;
+  padding-top: 7%;
+  text-align: right;
+  color: greenyellow;
+}
+.garisBawah {
+  grid-column: 1/4;
+}
+.garisBawah img {
+  width: 100%;
+  object-fit: cover;
+}
+/* ABOUT 2 */
+.about .about2 {
+  grid-area: about1;
+}
+.about2 img {
+  width: 544px;
+  height: 244px;
+  border: 5px solid greenyellow;
+  object-fit: cover;
+}
+.about2 .head {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+  font-family: "Luckiest Guy", cursive;
+  color: greenyellow;
+}
+.about2 .image1 {
+  margin-bottom: 5%;
+}
+.image1 h1 {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: "Luckiest Guy", cursive;
+  color: greenyellow;
+}
+.image1 p {
+  color: aliceblue;
+}
+.image2 h1 {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: "Luckiest Guy", cursive;
+  color: greenyellow;
+}
+.image2 p {
+  color: aliceblue;
+}
+/* About 3 */
+.about .about3 {
+  grid-area: about2;
+  margin-top: 15%;
+}
+.kotak1 {
+  width: 350px;
+  height: 424px;
+  background-image: url(img/kertas2.png);
+  border-radius: 10px;
+  backdrop-filter: blur(0.5);
+  background-size: 100%;
+}
+
+.kotak1 table {
+  width: 100%;
+}
+hr {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.kotak1 .waktu {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: "Luckiest Guy", cursive;
+  color: greenyellow;
+  text-shadow: -1px 1px rgb(131, 104, 104);
   text-align: center;
-  font-size: 3em;
+}
+td h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Luckiest Guy", cursive;
+  color: greenyellow;
+  padding: 5%;
+  text-shadow: -1px 1px rgb(131, 104, 104);
+}
+td h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "Luckiest Guy", cursive;
+  color: greenyellow;
+  margin-bottom: 15px;
+  text-shadow: -1px 1px rgb(131, 104, 104);
+}
+td p {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  margin-top: -15px;
+}
+.kotak1 tr td {
+  padding-top: 30px;
+}
+/* ABOUT */
+
+/* footer */
+footer {
+  margin-top: -5px;
+
+  background-color: rgb(24, 3, 10);
+  background-size: 100%;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  padding: 15px;
+}
+.containerFooter {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  margin: 5px auto;
+  height: 100%;
+}
+.footer {
+  width: 700px;
+  height: 100%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer .logo h1 {
+  font-size: 17px;
+  align-items: center;
+}
+
+.pilihFooter {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.pilihFooter li {
+  width: 60px;
+  font-family: "Open Sans", sans-serif;
+}
+.pilihFooter li a {
+  font-size: 10px;
+  text-decoration: none;
+  color: wheat;
+}
+/* sosmed */
+.sosmed {
+  display: flex;
+  width: 500px;
+}
+.pilihanSosmed img {
+  width: 20px;
+  filter: contrast(0);
+}
+.pilihanSosmed ul {
+  display: flex;
+  list-style: none;
+  width: 250px;
+  justify-content: space-around;
+}
+.sosmed .copyright {
+  font-size: 10px;
   color: white;
 }
 
-.navwrapper {
-  width: 100%;
-  height: 80px;
-  background-color: crimson;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
+/* GAMES */
 .contentwrapper {
   display: flex;
   flex-direction: column;
@@ -92,48 +477,90 @@ section {
   border: 5px solid white;
 }
 
-.navigation {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
+@media screen and (max-width: 1225px) {
+  main {
+    height: 1610px;
+  }
+  .about {
+    grid-template-rows: 0fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "head head head"
+      "about1 about1 about1 "
+      "about1 about1 about1"
+      "about2 about2 about2";
+  }
+  .about3 .kotak1 {
+    grid-column: -5/-1;
+    grid-row: 4/5;
+  }
 }
-
-.nav {
-  list-style-type: none;
-  padding: 20px;
-  margin: 5px;
-  cursor: pointer;
+@media screen and (max-width: 1050px) {
+  footer {
+    height: 50px;
+  }
+  .containerFooter {
+    display: block;
+  }
+  .footer {
+    width: 30%;
+    height: auto;
+  }
+  .sosmed {
+    display: block;
+  }
 }
-
-.nav:hover {
-  background-color: #eaeaea;
-  border-radius: 10px;
-  transition: all ease-in-out .25s;
+@media screen and (max-width: 840px) {
+  main {
+    height: 1650px;
+  }
 }
-
-.nav:hover>a {
-  color: #222;
+@media screen and (max-width: 682px) {
+  .logo h1 {
+    font-size: 30px;
+  }
+  main {
+    height: 1800px;
+  }
+  .about {
+    display: block;
+  }
+  .about .about1 {
+    display: block;
+  }
+  .textAbout,
+  .text2,
+  .text1 {
+    padding: 10px;
+  }
+  .toggleButton {
+    display: flex;
+    right: 50px;
+  }
+  .menu ul {
+    position: absolute;
+    right: 0;
+    top: 1;
+    height: 30vh;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    z-index: -11;
+    background-color: #302429;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    transform: translateX(100%);
+  }
+  .menu ul li a {
+    font-size: 20px;
+  }
 }
-
-.navlink {
-  color: white;
-  font-size: 1.2em;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 75px;
-  height: 75px;
-  background-color: wheat;
-  border-radius: 15px;
+@media screen and (max-width: 670px) {
+  main {
+    height: 200%;
+  }
+  .image1 img,
+  .image2 img {
+    width: 100%;
+  }
 }
