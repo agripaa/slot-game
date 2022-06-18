@@ -9,8 +9,13 @@ const box3 = document.getElementById("box3")
 const rewardImage = document.getElementById("imgReward")
 const content = document.getElementById("content")
 const slider = document.getElementById("top")
+const marquee = document.getElementById("marquee")
+let restart = document.getElementById("restart")
 
 const player = new Player()
+let marqueeText = document.createTextNode("Selamat Anda Telah Memenangkannya!")
+let restartText = document.createTextNode("Restart")
+restart.style.visibility = "hidden"
 
 let default_option = ['🤑', '👙', '💩']
 box1.textContent = default_option[0]
@@ -47,6 +52,9 @@ function winner() {
   if (box1.textContent == box2.textContent && box1.textContent == box3.textContent) {
     reward()
     location.href = "#reward"
+    marquee.appendChild(marqueeText)
+    restart.appendChild(restartText)
+    restart.style.visibility = "visible"
   }else {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -67,11 +75,26 @@ function winner() {
     }).then((result) => {
       if (result.isConfirmed) {
         true
+        start()
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         player.logout
       }
     })
   }
+}
+
+function restartButton () {
+  location.href = "#start"
+  const rolling = setInterval(function() {
+    box1.textContent = result[0]
+    box2.textContent = result[1]
+    box3.textContent = result[2]
+  }, 100)
+
+  setTimeout(function() {
+    clearInterval(rolling)
+    start()
+  }, 3000)
 }
 
 function start() {
