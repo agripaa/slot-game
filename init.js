@@ -99,11 +99,13 @@ onload = function async () {
     logoutForm.style.display = "block"
     content.style.display = "block"
     slider.style.display = "block"
+    title.style.display = "none"
   } else {
     registerForm.style.display = "block"
     logoutForm.style.display = "none"
     content.style.display = "none"
     slider.style.display = "none"
+    title.style.display = "block"
   }
 }
 
