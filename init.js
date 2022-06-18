@@ -1,4 +1,4 @@
-// declaring element
+const title = document.getElementById('title');
 const username = document.getElementById("username")
 const registerForm = document.getElementById("registerForm")
 const logoutForm = document.getElementById("logoutForm")
@@ -12,7 +12,7 @@ const slider = document.getElementById("top")
 
 const player = new Player()
 
-let default_option = ['😍', '🤣', '😱']
+let default_option = ['🤑', '👙', '💩']
 box1.textContent = default_option[0]
 box2.textContent = default_option[1]
 box3.textContent = default_option[2]
@@ -28,7 +28,6 @@ function dice() {
 
 function reward() {
   fetch('https://zoo-animal-api.herokuapp.com/animals/rand').then(x => x.json()).then(result => {
-    console.log('reward buat anda: ', result)
 
     //set nama hadiah reward
     let text = document.createElement('h1')
@@ -46,11 +45,9 @@ function reward() {
 
 function winner() {
   if (box1.textContent == box2.textContent && box1.textContent == box3.textContent) {
-    console.log('win')
     reward()
     location.href = "#reward"
-  } else {
-    console.log('lose')
+  }else {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: 'btn btn-success',
@@ -65,14 +62,12 @@ function winner() {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Lanjutkan',
-      cancelButtonText: 'Keluar',
+      cancelButtonText: 'Tobat',
       reverseButtons: false
     }).then((result) => {
       if (result.isConfirmed) {
         true
-      } else if (
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
         player.logout
       }
     })
@@ -83,7 +78,6 @@ function start() {
   //selama
   const rolling = setInterval(function () {
     const result = dice()
-    console.log('acak gambar...', result)
     box1.textContent = result[0]
     box2.textContent = result[1]
     box3.textContent = result[2]
@@ -115,6 +109,8 @@ onload = function async () {
 
 function register() {
   player.username = username.value
+  title.textContent = 'welcome ' + sessionStorage.getItem('token')
+  document.title = sessionStorage.getItem('token');
   player.register
 }
 
