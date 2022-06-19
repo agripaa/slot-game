@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2/family=Patrick+Hand&display=swap');
+@import url("https://fonts.googleapis.com/css2/family=Patrick+Hand&display=swap");
 
 *,
 html,
@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
 section {
@@ -109,10 +109,10 @@ section {
 .nav:hover {
   background-color: #eaeaea;
   border-radius: 10px;
-  transition: all ease-in-out .25s;
+  transition: all ease-in-out 0.25s;
 }
 
-.nav:hover>a {
+.nav:hover > a {
   color: #222;
 }
 
@@ -136,4 +136,16 @@ section {
   height: 75px;
   background-color: wheat;
   border-radius: 15px;
+}
+#imgReward {
+  text-align: center;
+}
+#restart {
+  font-weight: bold;
+  border: none;
+
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
 }
